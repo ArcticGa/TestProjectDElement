@@ -3,7 +3,7 @@ const successBlock = document.querySelector('.popup-content__success')
 form.addEventListener('submit', formSend)
 let formReq = document.querySelectorAll('._req')
 
-function formSend(e) {
+async function formSend(e) {
   e.preventDefault()
 
   let error = formValidation(form)
@@ -14,6 +14,21 @@ function formSend(e) {
       input.value = ''
     })
   }
+
+  // Попытка написания кода для отправки на любой URL. Подробности описаны в README.md
+
+  // let formData = new FormData(form)
+  // if (error === 0) {
+  //   let response = await fetch('', {
+  //     method: 'POST',
+  //     body: formData,
+  //   })
+  //   if (response.ok) {
+  //     let result = await response.json()
+  //     form.innerHTML = ''
+  //     form.reset()
+  //   }
+  // }
 }
 
 function formValidation() {
