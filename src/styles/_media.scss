@@ -1,0 +1,119 @@
+/*отдельное для картинки Header*/
+@media (max-width: 1750px) {
+  .header-section {
+    .header {
+      &-body {
+        &__image {
+          position: static;
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 905px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 769px) {
+  .header-section {
+    .header {
+      &-menu {
+        padding: 12px 0 30px 0;
+      }
+      &-body {
+        flex-direction: column;
+        &__image {
+          display: none;
+        }
+        &__text {
+          h1 {
+            font-size: 2.5rem;
+            line-height: 45px;
+          }
+          button {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    padding-top: 5rem;
+    &-title {
+      font-size: 1.75rem;
+    }
+    .cards-section {
+      padding-bottom: 6rem;
+      .main-title {
+        margin: 0 auto;
+        position: static;
+        margin-bottom: 3rem;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        .card-item {
+          padding: 1.5rem;
+          width: 18rem;
+          height: 500px;
+          &__image {
+            height: 30%;
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    &-header {
+      margin-left: 2rem;
+      padding: 80px 0 40px 0;
+      flex-direction: column;
+      align-items: start;
+      &__title {
+        max-width: none;
+        margin: 0 0 1.25rem 0;
+      }
+    }
+    &-logos {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(4, 170px);
+      &__client {
+        border: none;
+      }
+    }
+  }
+  .footer {
+    &-top {
+      flex-direction: column;
+      .footer-textblock {
+        margin-bottom: 2rem;
+      }
+    }
+    &-bottom {
+      flex-direction: column;
+    }
+  }
+  .darkblue-block {
+    margin-right: 1.5rem;
+  }
+
+  .lock {
+    padding-right: 0;
+  }
+
+  .popup {
+    &-content {
+      padding: 1.25rem;
+      &__block {
+        .field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

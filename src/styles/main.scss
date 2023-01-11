@@ -1,0 +1,353 @@
+@import 'reset';
+@import 'general';
+
+/* Основные стили */
+.header-section {
+  height: 100vh;
+  position: relative;
+  .header {
+    margin: 0 20px;
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 0 101px 0;
+    }
+    &-body {
+      display: flex;
+      position: relative;
+      padding: 5rem 0 0 0;
+      &__text {
+        z-index: 2;
+        color: $darkBlue;
+        h1 {
+          font-family: Galien;
+          font-size: 4rem;
+          letter-spacing: 0.04em;
+          line-height: 74px;
+          max-width: 510px;
+        }
+        p {
+          margin: 32px 0 71px 0;
+          max-width: 425px;
+        }
+      }
+      &__image {
+        position: absolute;
+        right: -20%;
+        top: -20%;
+        img {
+          width: 800px;
+        }
+      }
+    }
+  }
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(
+      0deg,
+      #98c3e8 8.84%,
+      rgba(152, 195, 232, 0) 90.12%
+    );
+    opacity: 0.3;
+  }
+}
+
+.main {
+  padding: 12rem 1.25rem 0px 1.25rem;
+  .cards-section {
+    padding-bottom: 212px;
+    position: relative;
+    .main-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $blue;
+      max-width: 358px;
+    }
+    .cards {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 100px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        'layout-first layout-second'
+        'layout-first layout-third';
+      .card-item {
+        padding: 3rem;
+        height: 525px;
+        width: 23.75rem;
+        background: #ffffff;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.4);
+        }
+        &__image {
+          text-align: center;
+          height: 40%;
+        }
+        &__title {
+          font-family: 'GilroyMedium';
+          color: $darkBlue;
+          height: 15%;
+          font-size: 1.25rem;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+          margin: 20px 0;
+        }
+        &__text {
+          height: 30%;
+          padding-bottom: 32px;
+        }
+        &__button {
+          cursor: pointer;
+          height: 10%;
+          display: flex;
+          align-items: center;
+          font-size: 0.875rem;
+          letter-spacing: 0.05em;
+          color: $lightBlue;
+          transition: all 0.1s linear;
+          &:hover {
+            font-size: 0.9rem;
+          }
+          img {
+            margin-left: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clients {
+  margin: 0 20px;
+  color: $white;
+  &-header {
+    display: flex;
+    align-items: center;
+    padding: 96px 0 111px 0;
+    &__title {
+      max-width: 223px;
+      margin-left: 3rem;
+      margin-right: 6rem;
+    }
+    &__text {
+      color: $white !important;
+      max-width: 540px;
+    }
+  }
+  &-logos {
+    padding-bottom: 125px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 170px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    &__client {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: all 0.2s linear;
+      &:first-child {
+        border-left: none;
+      }
+      &:nth-child(4) {
+        border-right: none;
+      }
+      &:nth-child(5) {
+        border-left: none;
+      }
+      &:last-child {
+        background-color: $darkBlue;
+      }
+      &:hover {
+        background: $blue;
+      }
+    }
+  }
+}
+
+.footer {
+  padding-top: 96px;
+  margin: 0 20px;
+  color: $white;
+  hr {
+    position: absolute;
+    left: 0;
+    width: 84%;
+  }
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    .footer-textblock {
+      &__title {
+        max-width: 317px;
+        margin-bottom: 32px;
+      }
+      &__text {
+        max-width: 460px;
+        color: $white;
+      }
+    }
+  }
+  &-bottom {
+    padding-top: 96px;
+    display: flex;
+    .footer-contact {
+      margin-right: 130px;
+      &__title {
+        display: flex;
+        align-items: center;
+        font-size: 1.75rem;
+        margin-bottom: 33px;
+        img {
+          margin-right: 15px;
+        }
+      }
+      li {
+        max-width: 264px;
+        margin-bottom: 24px;
+        line-height: 26px;
+        span {
+          font-family: GilroyMedium;
+          margin-right: 16px;
+        }
+      }
+    }
+    .footer-block {
+      max-width: 163px;
+      margin-right: 100px;
+      li {
+        margin-bottom: 16px;
+        line-height: 26px;
+      }
+      &__title {
+        font-family: GilroyMedium;
+        font-size: 1.25rem;
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &-copyright {
+    opacity: 0.4;
+    padding: 3rem 0;
+  }
+}
+
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+  }
+  &-content {
+    margin: 0 20px;
+    position: relative;
+    background-color: $white;
+    padding: 3.5rem;
+    border-radius: 10px;
+    img {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      color: $darkBlue;
+      margin-bottom: 3rem;
+    }
+    &__block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      label {
+        color: $darkBlue;
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+      }
+      .field {
+        border: 1px solid $blue;
+        border-radius: 10px;
+        &::placeholder {
+          opacity: 0.4;
+        }
+      }
+      input {
+        width: 428px;
+        padding: 21px 42px;
+        &::placeholder {
+          opacity: 0.4;
+        }
+      }
+      textarea {
+        padding: 21px 36px;
+        resize: none;
+        min-height: 144px;
+      }
+      /* Стили для формы */
+      .error {
+        border: 1px solid red;
+      }
+      .error-label {
+        margin-top: 0.5rem;
+        color: red;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 23px 0;
+    }
+    &__success {
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: $darkBlue;
+      border-radius: 10px;
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.5s all;
+      }
+    }
+  }
+}
+
+@import 'media';

@@ -1,0 +1,84 @@
+/* Общие стили */
+.button {
+  background: $lightBlue;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  width: 220px;
+  border-radius: 10px;
+  padding: 15px 48px;
+  color: $white;
+  transition: all 0.1s linear;
+  &:hover {
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.6);
+  }
+}
+.body-h {
+  font-size: 2.25rem;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+}
+.body-p {
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #1f3f68;
+  opacity: 0.6;
+}
+
+.top {
+  position: relative;
+  top: -80px;
+}
+
+/* Гриды для карточек */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout-first {
+  grid-area: layout-first;
+}
+.layout-second {
+  grid-area: layout-second;
+}
+.layout-third {
+  grid-area: layout-third;
+}
+
+/* background */
+.blue-block {
+  background: $lightBlue;
+  border-radius: 200px 0px 0px 0px;
+}
+.darkblue-block {
+  position: relative;
+  background: $blue;
+  border-radius: 0px 200px 0px 0px;
+  margin-right: 6rem;
+}
+
+.border-top {
+  border-bottom: 1px solid $white;
+  border-left: 1px solid $white;
+}
+.border-bottom {
+  border-left: 1px solid $white;
+}
+
+/* Стили для формы */
+.error {
+  border: 1px solid red;
+}
+.error-label {
+  color: red;
+}
+._sending {
+  opacity: 0.3;
+}
+
+
+/* для body при открытии popup*/
+.lock {
+  height: 100vh;
+  overflow: hidden;
+  padding-right: 17px;
+}
